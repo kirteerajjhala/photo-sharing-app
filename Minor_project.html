@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .mobile-menu {
+      display: none;
+    }
+    .mobile-menu.active {
+      display: flex;
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 bg-white flex justify-between items-center w-full h-[68px] px-5 border-b border-gray-200 z-50">
+    <!-- Logo -->
+    <div class="flex items-center space-x-4">
+      <span class="text-xl font-bold text-[#475467]">Kirteeraj</span>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden sm:flex space-x-8 text-[#475467] font-semibold">
+        <li><a href="#">Use Cases</a></li>
+        <li><a href="#">Wall of Love</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- Desktop Buttons -->
+    <div class="hidden sm:flex space-x-6 items-center">
+      <a href="./Log-in_page.html" class="text-[#475467]">Log in</a>
+      <a href="Sign-up.html" class="bg-pink-600 text-white px-4 py-2 rounded-md">Get Started</a>
+    </div>
+
+    <!-- Hamburger Icon (Mobile Only) -->
+    <button id="hamburger" class="sm:hidden text-3xl text-[#475467] focus:outline-none">
+      ☰
+    </button>
+  </nav>
+
+  <!-- Mobile Menu (Initially Hidden) -->
+  <div id="mobileMenu" class="mobile-menu sm:hidden fixed top-[68px] left-0 w-full bg-white flex-col items-center space-y-6 py-6 text-[#475467] font-semibold z-40">
+    <a href="#">Use Cases</a>
+    <a href="#">Wall of Love</a>
+    <a href="#">Blog</a>
+    <a href="./Log-in_page.html">Log in</a>
+    <a href="Sign-up.html" class="bg-pink-600 text-white px-4 py-2 rounded-md">Get Started</a>
+  </div>
+
+  <main class="pt-[100px] px-4 sm:px-[32px]">
+    <!-- Responsive content goes here -->
+    <section class="text-center max-w-4xl mx-auto">
+      <div class="relative w-full max-w-xs sm:max-w-md mx-auto">
+        <img src="./images/laurel.svg" class="w-[300px]" alt="Laurel award badge" />
+        <div class="absolute inset-0 flex flex-col w-[300px] items-center justify-end pb-6">
+          <span class="text-md font-semibold bg-white px-2">#1 Photo Sharing App</span>
+          <div class="flex space-x-1 mt-2">
+            <img src="./images/starts.svg" class="w-[20px] h-[15px]" alt="Star" />
+            <img src="./images/starts.svg" class="w-[20px] h-[15px]" alt="Star" />
+            <img src="./images/starts.svg" class="w-[20px] h-[15px]" alt="Star" />
+            <img src="./images/starts.svg" class="w-[20px] h-[15px]" alt="Star" />
+            <img src="./images/starts.svg" class="w-[20px] h-[15px]" alt="Star" />
+          </div>
+        </div>
+      </div>
+
+      <h1 class="mt-10 text-3xl sm:text-6xl font-bold text-gray-900 leading-tight">Easily Collect Photos From Every Guest At Your <span class="text-pink-700">Birthday</span></h1>
+      <p class="mt-6 text-lg sm:text-xl text-gray-700">Gather every photo & video from your guests into a digital album, ready to share in a live slideshow — no apps, no hassle, so simple even grandma will use it.</p>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="Sign-up.html" class="bg-pink-600 text-white px-6 py-3 rounded-md font-bold w-full sm:w-auto text-center">Create Your Event</a>
+        <button class="bg-white px-6 py-3 border-2 border-gray-400 rounded-md text-black font-medium w-full sm:w-auto">Watch How it Works</button>
+      </div>
+
+      <p class="mt-4 text-sm text-gray-600">Start free. Setup in under 2 minutes.</p>
+    </section>
+  </main>
+
+
+
+  <section class="flex flex-col lg:flex-row justify-around mt-24 gap-12 px-4 flex-wrap">
+    <!-- Left content blocks -->
+    <div class="flex flex-col gap-8 max-w-sm mx-auto">
+      <div class="text-center space-y-5">
+        <img src="./images/camera.png" alt="" class="w-[50px] h-[50px] mx-auto">
+        <h2 class="text-xl font-bold text-[#101828]">Guests Photos & Videos</h2>
+        <p class="text-base text-[#475467]">Experience your event through your guests' eyes by collecting every photo and video they take!</p>
+      </div>
+      <div class="text-center space-y-5">
+        <img src="./images/camera.png" alt="" class="w-[50px] h-[50px] mx-auto">
+        <h2 class="text-xl font-bold text-[#101828]">Text Posts & Captions</h2>
+        <p class="text-base text-[#475467]">Allow guests to share messages as decorated text posts or captions alongside their photos and videos</p>
+      </div>
+    </div>
+  
+    <!-- Center video -->
+    <div class="flex justify-center">
+      <video src="wedding-demo.mp4" loop autoplay muted class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-md h-auto rounded-lg shadow-md"></video>
+    </div>
+  
+    <!-- Right content blocks -->
+    <div class="flex flex-col gap-8 max-w-sm mx-auto">
+      <div class="text-center space-y-5">
+        <img src="./images/camera.png" alt="" class="w-[50px] h-[50px] mx-auto">
+        <h2 class="text-xl font-bold text-[#101828]">Extremely Easy to Use</h2>
+        <p class="text-base text-[#475467]">Guests can easily join by clicking the album link or scanning a QR code. No app downloads or registrations. We built this for non-techies.</p>
+      </div>
+      <div class="text-center space-y-5">
+        <img src="./images/camera.png" alt="" class="w-[50px] h-[50px] mx-auto">
+        <h2 class="text-xl font-bold text-[#101828]">Live Slideshow</h2>
+        <p class="text-base text-[#475467]">Stream every upload made by your guests on a stunning slideshow that updates in real time. Display on TVs, projectors and more.</p>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <div class="how-does-it-works w-full pt-[90px] flex flex-col">
+
+    <div class="py-[45px] flex flex-col items-center space-y-5">
+        <h2 class="text-[32px] sm:text-[40px] font-bold text-[#101828]">How does it work?</h2>
+        <p class="text-[18px] sm:text-[22px] text-[#475467]">
+            Hassle-free experience - for you and your guests.
+        </p>
+    </div>
+</div>
+
+<section class="flex flex-col sm:flex-row justify-around mt-12 sm:mt-24 gap-8 sm:gap-12 px-4 sm:px-8">
+
+    <!-- Step 1 Content -->
+    <div class="step-1 w-full sm:w-[46%] space-y-6">
+        <div class="text-[#ff068f] font-bold text-[20px] sm:text-[22px]">Step-1 :</div>
+        <h1 class="text-[28px] sm:text-[35px] font-bold text-[#101828]">Create your event</h1>
+        <p class="text-[16px] sm:text-[18px] lg:text-[20px] text-[#475467]">Create a private digital album for guests to add photos, videos, and messages. Customize the title, date, colors, and backgrounds to make it your own!</p>
+
+        <button class="text-[14px] sm:text-[16px] bg-[#ff068f] px-[18px] py-[10px] rounded-md h-[44px] text-white cursor-pointer font-bold w-full sm:w-auto">
+            <a href="Sign-up.html">Create Your Event</a>
+        </button>
+    </div>
+
+    <!-- Image -->
+    <div class="w-full sm:w-[46%]">
+        <img src="./images/hey-rachelmin.png" alt="" class="w-full h-auto object-cover rounded-lg shadow-lg">
+    </div>
+
+</section>
+
+
+
+
+
+<!-- Step 2 -->
+<section class="py-24 px-4 sm:px-8 flex flex-col lg:flex-row items-center lg:justify-around gap-12">
+  <!-- Image -->
+  <div class="w-full lg:w-1/2 flex justify-center">
+    <img src="./images/Scan_Icons.png" alt="Scan Icon" class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain">
+  </div>
+  <!-- Text -->
+  <div class="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
+    <div class="text-pink-600 font-bold text-lg sm:text-xl">Step‑2 :</div>
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#101828]">Share it with your guests</h2>
+    <p class="text-base sm:text-lg text-[#475467]">
+      Your guests can easily view or contribute photos and videos to your digital album by scanning the unique QR code or using the album URL—before, during, and after your event!
+    </p>
+    <ul class="list-inside list-disc text-base sm:text-lg text-[#475467] space-y-2">
+      <li>Share as a link through email, SMS, chat apps, etc.</li>
+      <li>Share as a QR code on printed cards and signs.</li>
+      <li>No app downloads. No registrations needed.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Step 3 -->
+<section class="py-24 px-4 sm:px-8 flex flex-col-reverse lg:flex-row items-center lg:justify-around gap-12 bg-gray-50">
+  <!-- Text -->
+  <div class="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
+    <div class="text-pink-600 font-bold text-lg sm:text-xl">Step‑3 (optional):</div>
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#101828]">Display it all on a live slideshow</h2>
+    <p class="text-base sm:text-lg text-[#475467]">
+      Up for some fun? Add to the event a Live Photo Wall (slideshow) that updates in real time with every photo and video added by you or your guests. Easily display it on projectors, TVs, tablets, or wherever you like.
+    </p>
+  </div>
+  <!-- Video -->
+  <div class="w-full lg:w-1/2 flex justify-center">
+    <video src="photo-wall-example.mp4" autoplay loop muted class="w-full max-w-sm sm:max-w-md lg:max-w-lg rounded-lg shadow-lg"></video>
+  </div>
+</section>
+
+
+<!-- Step‑4 -->
+<section class="py-24 px-4 sm:px-8 flex flex-col lg:flex-row items-center lg:justify-around gap-12">
+  <!-- Image -->
+  <div class="w-full lg:w-1/2 flex justify-center">
+    <img src="./images/party.png" alt="Party" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-cover rounded-lg shadow-md">
+  </div>
+  <!-- Text -->
+  <div class="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
+    <div class="text-pink-600 font-bold text-lg sm:text-xl">Step‑4 :</div>
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#101828]">Enjoy all captured moments</h2>
+    <p class="text-base sm:text-lg lg:text-xl text-[#475467]">
+      At any moment you can view all photos and videos captured by your guests in your digital album. Revisit and cherish those unforgettable memories!
+    </p>
+    <a href="Sign-up.html" class="inline-block bg-pink-600 text-white px-6 py-3 rounded-md font-bold text-sm sm:text-base">
+      Create Your Event
+    </a>
+    <ul class="list-inside list-disc text-base sm:text-lg text-[#475467] space-y-2">
+      <li>Every moment is captured in a stunning digital album.</li>
+      <li>Download everything as a zipped folder in one click.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="py-16 px-4 sm:px-6 lg:px-20 text-center bg-white text-gray-800">
+  <!-- Heading -->
+  <h1 class="text-3xl sm:text-4xl font-bold mb-4">
+    All you need for a perfect event
+  </h1>
+  <p class="text-gray-500 text-lg mb-12 max-w-2xl mx-auto">
+    From digital albums to QR code templates – we've got it all covered
+  </p>
+
+  <!-- Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Feature 1 -->
+    <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition bg-pink-50">
+      <div class="text-3xl mb-3 text-pink-500">🖼️</div>
+      <h3 class="font-bold text-lg mb-1">Digital Album</h3>
+      <p class="text-sm text-gray-600">All photos and videos are automatically saved in a digital album for you to access at any time.</p>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition bg-pink-50">
+      <div class="text-3xl mb-3 text-pink-500">📥</div>
+      <h3 class="font-bold text-lg mb-1">One-click Download</h3>
+      <p class="text-sm text-gray-600">Download all photos to your device or cloud storage with one click.</p>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition bg-pink-50">
+      <div class="text-3xl mb-3 text-pink-500">⚡</div>
+      <h3 class="font-bold text-lg mb-1">No Apps Required</h3>
+      <p class="text-sm text-gray-600">No need to install apps. Guests can participate instantly.</p>
+    </div>
+
+    <!-- Feature 4 -->
+    <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition bg-pink-50">
+      <div class="text-3xl mb-3 text-pink-500">📱</div>
+      <h3 class="font-bold text-lg mb-1">QR Code Templates</h3>
+      <p class="text-sm text-gray-600">Print QR codes on cards and signs for easy access to albums.</p>
+    </div>
+
+    <!-- Feature 5 -->
+    <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition bg-pink-50">
+      <div class="text-3xl mb-3 text-pink-500">🖥️</div>
+      <h3 class="font-bold text-lg mb-1">Live Photo Wall</h3>
+      <p class="text-sm text-gray-600">Display a live slideshow of photos uploaded by you and guests.</p>
+    </div>
+
+    <!-- Feature 6 -->
+    <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition bg-pink-50">
+      <div class="text-3xl mb-3 text-pink-500">🎨</div>
+      <h3 class="font-bold text-lg mb-1">Customizations</h3>
+      <p class="text-sm text-gray-600">Customize everything with your brand's colors and style.</p>
+    </div>
+
+    <!-- Feature 7 -->
+    <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition bg-pink-50">
+      <div class="text-3xl mb-3 text-pink-500">💬</div>
+      <h3 class="font-bold text-lg mb-1">Text & Captions</h3>
+      <p class="text-sm text-gray-600">Add text posts or captions alongside photos and videos.</p>
+    </div>
+
+    <!-- Feature 8 -->
+    <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition bg-pink-50">
+      <div class="text-3xl mb-3 text-pink-500">🔒</div>
+      <h3 class="font-bold text-lg mb-1">Private & Secured</h3>
+      <p class="text-sm text-gray-600">Photos are private. Only shared users can view them.</p>
+    </div>
+  </div>
+</section>
+ 
+
+<section class="py-16 px-4 sm:px-6 lg:px-20 text-center">
+  <!-- Title -->
+  <h1 class="text-3xl sm:text-4xl font-bold mb-4">
+    Event Photo Sharing For Any Occasion
+  </h1>
+  <p class="text-gray-500 text-lg mb-12 max-w-2xl mx-auto">
+    From intimate weddings to grand conferences, we've got every moment covered.
+  </p>
+
+  <!-- Use Cases Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
+    <!-- Item 1 -->
+    <div class="flex gap-4 items-start">
+      <div class="bg-pink-100 text-2xl p-3 rounded-xl">💍</div>
+      <div>
+        <h3 class="font-bold">Weddings</h3>
+        <p class="text-sm text-gray-600">Collect every moment of it</p>
+        <a href="#" class="text-pink-600 text-sm font-semibold">Learn More →</a>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="flex gap-4 items-start">
+      <div class="bg-pink-100 text-2xl p-3 rounded-xl">🎉</div>
+      <div>
+        <h3 class="font-bold">Parties & Celebrations</h3>
+        <p class="text-sm text-gray-600">Share photos & have fun</p>
+        <a href="#" class="text-pink-600 text-sm font-semibold">Learn More →</a>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="flex gap-4 items-start">
+      <div class="bg-pink-100 text-2xl p-3 rounded-xl">🎈</div>
+      <div>
+        <h3 class="font-bold">Birthdays</h3>
+        <p class="text-sm text-gray-600">Celebrate with your loved ones</p>
+        <a href="#" class="text-pink-600 text-sm font-semibold">Learn More →</a>
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="flex gap-4 items-start">
+      <div class="bg-pink-100 text-2xl p-3 rounded-xl">🎤</div>
+      <div>
+        <h3 class="font-bold">Conferences & Public Events</h3>
+        <p class="text-sm text-gray-600">Engage with your audience</p>
+        <a href="#" class="text-pink-600 text-sm font-semibold">Learn More →</a>
+      </div>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="flex gap-4 items-start">
+      <div class="bg-pink-100 text-2xl p-3 rounded-xl">🍾</div>
+      <div>
+        <h3 class="font-bold">Corporate & Company Events</h3>
+        <p class="text-sm text-gray-600">Connect with your people</p>
+        <a href="#" class="text-pink-600 text-sm font-semibold">Learn More →</a>
+      </div>
+    </div>
+
+    <!-- Item 6 -->
+    <div class="flex gap-4 items-start">
+      <div class="bg-pink-100 text-2xl p-3 rounded-xl">🦄</div>
+      <div>
+        <h3 class="font-bold">Whatever Event!</h3>
+        <p class="text-sm text-gray-600">We got you covered</p>
+        <a href="#" class="text-pink-600 text-sm font-semibold">Get Started →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Questions Section -->
+ <section class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12">
+  <div>
+    <h2 class="text-4xl font-bold mb-4">Questions?</h2>
+    <p class="text-lg text-gray-600 mb-6">
+      Everything you need to know about the product. Can’t find the answer you’re looking for? Please chat to our team. Ready to go? Click the button below!
+    </p>
+    <button class="bg-pink-600 text-white font-semibold py-2 px-4 rounded hover:bg-pink-700 transition">I'm ready to start!</button>
+  </div>
+  <div class="space-y-6">
+    <div class="border-b pb-3">
+      <h3 class="font-semibold">Do guests need to download an app to participate?</h3>
+      <p class="text-sm text-gray-600">Nope! It's all web-based – no downloads required.</p>
+    </div>
+    <div class="border-b pb-3">
+      <h3 class="font-semibold">Can I download all guests' photos & videos?</h3>
+      <p class="text-sm text-gray-600">Yes! You can download everything in one click.</p>
+    </div>
+    <div class="border-b pb-3">
+      <h3 class="font-semibold">Why is it better than photo sharing apps?</h3>
+      <p class="text-sm text-gray-600">Because it's instant, simple, and made for events with guests in mind.</p>
+    </div>
+    <div class="border-b pb-3">
+      <h3 class="font-semibold">Can I print the QR code on signs?</h3>
+      <p class="text-sm text-gray-600">Absolutely! We provide high-quality QR code templates for printing.</p>
+    </div>
+    <div class="border-b pb-3">
+      <h3 class="font-semibold">My event is more than one day, can I use Kululu?</h3>
+      <p class="text-sm text-gray-600">Yes! Your album stays active as long as you need.</p>
+    </div>
+    <div class="border-b pb-3">
+      <h3 class="font-semibold">How do I use the Photo Wall?</h3>
+      <p class="text-sm text-gray-600">Just connect your device to a screen and let it play – guests upload live!</p>
+    </div>
+    <div class="border-b pb-3">
+      <h3 class="font-semibold">Are my photos private?</h3>
+      <p class="text-sm text-gray-600">Yes, only you and selected guests can see them.</p>
+    </div>
+    <div class="border-b pb-3">
+      <h3 class="font-semibold">We already have a photographer, should we it?</h3>
+      <p class="text-sm text-gray-600">Definitely! This complements the professional photos by capturing real moments from guests too.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer (without 'Company' section) -->
+<footer class="bg-pink-50 py-12 mt-12">
+  <div class="max-w-7xl mx-auto px-4 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+    <div>
+      <h3 class="text-2xl font-bold text-pink-600 mb-2">Kirteeraj</h3>
+      <p class="text-sm text-gray-600">Same events, just better.</p>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-2">General</h4>
+      <ul class="space-y-1 text-sm text-gray-700">
+        <li>Home</li>
+        <li>Pricing</li>
+        <li>Reviews</li>
+        <li>For Businesses</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-2">Use Cases</h4>
+      <ul class="space-y-1 text-sm text-gray-700">
+        <li>Weddings</li>
+        <li>Birthdays</li>
+        <li>Conferences</li>
+        <li>Corporate</li>
+        <li>Celebrations</li>
+        <li>Group Photo Sharing</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-2">Other</h4>
+      <ul class="space-y-1 text-sm text-gray-700">
+        <li>The Guest Alternative</li>
+        <li>Digital Wedding Guestbook</li>
+        <li>QR Code for Wedding Pictures</li>
+        <li>QR Code for Photo Sharing</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-8 flex justify-center items-center space-x-4">
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="w-6 h-6">
+    </a>
+  </div>
+  <div class="text-center text-xs text-gray-500 mt-4">© 2024 @Kirteerajjhala.</div>
+</footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
